@@ -13,7 +13,8 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
 import { ShopComponent } from './shop/shop.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { ProductsComponent } from './products/products.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,11 +28,15 @@ import { FooterComponent } from './footer/footer.component';
     ProductdetailsComponent,
     ShopComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ProductsComponent,
+
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

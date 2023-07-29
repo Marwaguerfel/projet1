@@ -5,6 +5,7 @@ import { ShopComponent } from './shop/shop.component';
 import { BlogComponent } from './blog/blog.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import {ProductsComponent} from "./products/products.component";
 
 const routes: Routes = [
   {
@@ -31,7 +32,13 @@ const routes: Routes = [
     path:'contact' ,
     component: ContactComponent
   },
-  
+  {
+    path:'list' ,
+    component: ProductsComponent
+  },
+
+
+
 ];
 
 @NgModule({
