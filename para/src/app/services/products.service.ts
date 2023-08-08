@@ -23,4 +23,13 @@ export class ProductsService {
 
     );
   }
+  getProductById(id : string): Observable<Product> {
+    return this.http.get<Product>(`${environment.baseUrl}product/${id}`).pipe(
+      map((product) => {
+        product.image = `${environment.baseUrl}${product.image}`;
+        return product;
+      })
+    );
+  }
+
 }
