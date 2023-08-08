@@ -21,23 +21,30 @@ export class LoginService {
 
     let postData = {username : username ,password :password};
 
-    this.http
-      .post<any>(`${environment.baseUrl}/login`, postData, {
+    this.http.post<any>(`${environment.baseUrl}/login`, postData, {
         headers: this.headers,
         params: this.params,
       })
       .subscribe((res) => console.log(res));
-    return this.http.post<any>( `${environment.baseUrl}/login`, postData)
-      .pipe(map(user => {
-          if (user) {
-            localStorage.setItem('currentuser', JSON.stringify(user));
-            return user;
-          }
-        }),
-
-      );
-
-
       }
+logout() {
+    localStorage.removeItem('currentuser');
+
+  }
+
+  signup(username: string, password: string ,password_repeat :string, email:string) {
+
+    let postData = {username : username ,password :password , password_repeat :password_repeat , email :email};
+    console.log(postData);
+    this.http
+      .post<any>(`${environment.baseUrl}/sign-up`, postData, {
+        headers: this.headers,
+        params: this.params,
+      })
+      .subscribe((res) => console.log(res));
+
+
+
+  }
 
 }
