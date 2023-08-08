@@ -14,12 +14,14 @@ import { CartComponent } from './cart/cart.component';
 const routes: Routes = [
   {
     path:'home' ,
-    component: IndexComponent
+    component: IndexComponent,
+
   },
 
   {
     path:'shop' ,
     component: ShopComponent
+
   },
 
   {
@@ -50,15 +52,16 @@ const routes: Routes = [
     path:'forgetp' ,
     component: ForgetComponent
   },
-  
+
   {
     path:'cart' ,
     component: CartComponent
   },
-  
-  
-  
-  
+  {path: 'productDetail/:id', component: ProductdetailsComponent},
+
+
+
+
 
 
 

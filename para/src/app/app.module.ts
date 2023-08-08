@@ -16,6 +16,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgetComponent } from './forget/forget.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,7 @@ import { ForgetComponent } from './forget/forget.component';
     LoginComponent,
     RegisterComponent,
     ForgetComponent,
-    
+
 
 
   ],
@@ -40,6 +41,8 @@ import { ForgetComponent } from './forget/forget.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

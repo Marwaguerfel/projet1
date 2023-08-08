@@ -1,3 +1,4 @@
+
 <!-- Page Header Start -->
 <div class="container-fluid bg-secondary mb-5">
     <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
@@ -13,7 +14,7 @@
 
 
 <!-- Shop Detail Start -->
-<div class="container-fluid py-5">
+<div *ngIf="Product" class="container-fluid py-5">
     <div class="row px-xl-5">
         <div class="col-lg-5 pb-5">
             <div id="product-carousel" class="carousel slide" data-ride="carousel">
@@ -41,7 +42,8 @@
         </div>
 
         <div class="col-lg-7 pb-5">
-            <h3 class="font-weight-semi-bold">Colorful Stylish Shirt</h3>
+          <H1>{{Product}}</H1>
+            <h3 class="font-weight-semi-bold">MM{{Product.name}} MM</h3>
             <div class="d-flex mb-3">
                 <div class="text-primary mr-2">
                     <small class="fas fa-star"></small>
@@ -52,7 +54,7 @@
                 </div>
                 <small class="pt-1">(50 Reviews)</small>
             </div>
-            <h3 class="font-weight-semi-bold mb-4">$150.00</h3>
+            <h3 class="font-weight-semi-bold mb-4">TT{{Product.price}}TT</h3>
             <p class="mb-4">Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc invidunt ipsum et, labore clita lorem magna lorem ut. Erat lorem duo dolor no sea nonumy. Accus labore stet, est lorem sit diam sea et justo, amet
                 at lorem et eirmod ipsum diam et rebum kasd rebum.</p>
             <div class="d-flex mb-3">

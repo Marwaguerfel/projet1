@@ -8,6 +8,7 @@ export class Product {
   featured: boolean;
   label: string;
   price: string;
+  oldprice: string;
   description: string;
 
 
@@ -19,6 +20,7 @@ export class Product {
     featured: boolean,
     label: string,
     price: string,
+    oldprice: string,
     description: string,
 
   ) {
@@ -29,6 +31,7 @@ export class Product {
     this.featured = featured;
     this.label = label;
     this.price = price;
+    this.oldprice = oldprice;
     this.description = description;
 
   }
