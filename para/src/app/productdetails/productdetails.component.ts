@@ -24,6 +24,7 @@ export class ProductdetailsComponent  implements OnInit{
       (Product) => (this.Product = Product),
       (errmess) => (this.errMess = <any>errmess)
     );
+    
   }
 
 }
