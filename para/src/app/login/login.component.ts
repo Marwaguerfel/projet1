@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
    registerForm!: FormGroup;
 
   constructor(private LoginService: LoginService,private formBuilder: FormBuilder,) {}
+  isLogedIn=false;
   ngOnInit() {
 
     this.registerForm = this.formBuilder.group ({
@@ -21,11 +22,13 @@ export class LoginComponent implements OnInit {
     });
   }
   get f() { return this.registerForm.controls; }
-  onSubmit(){
-
-
+  async onSubmit(){
      // @ts-ignore
-    this.LoginService.login(this.f.username.value, this.f.password.value);
-  }
+   await this.LoginService.login(this.f.username.value, this.f.password.value);
+    if(localStorage.getItem('token')!=null){
+      window.location.href='home'
+      console.log("login success");
+    }
+      }
 
 }

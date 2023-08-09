@@ -59,7 +59,7 @@ const routes: Routes = [
   },
   {path: 'productDetail/:id', component: ProductdetailsComponent},
 
-
+  { path: '**', component: IndexComponent },
 
 
 
