@@ -17,7 +17,7 @@ export class LoginService {
       'application/json'
     );
    params = new HttpParams();
-      login(username: string, password: string) {
+   login(username: string, password: string) {
 
     let postData = {username : username ,password :password};
 
@@ -25,14 +25,20 @@ export class LoginService {
         headers: this.headers,
         params: this.params,
       })
-      .subscribe((res) => console.log(res));
+      .subscribe((res) => {
+        localStorage.setItem('token', res.token);
+        localStorage.setItem('username', res.user.username);
+      });
+
       }
 logout() {
-    localStorage.removeItem('currentuser');
+    localStorage.removeItem('token');
+    localStorage.removeItem('username');
+    window.location.reload();
 
   }
 
-  signup(username: string, password: string ,password_repeat :string, email:string) {
+  async signup(username: string, password: string ,password_repeat :string, email:string) {
 
     let postData = {username : username ,password :password , password_repeat :password_repeat , email :email};
     console.log(postData);
