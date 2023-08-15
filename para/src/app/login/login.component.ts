@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
     });
   }
   get f() { return this.registerForm.controls; }
+  
   async onSubmit(){
      // @ts-ignore
    await this.LoginService.login(this.f.username.value, this.f.password.value);
