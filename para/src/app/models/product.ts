@@ -12,6 +12,7 @@ export class Product {
   description: string;
 
 
+
   constructor(
     id: string,
     name: string,
@@ -22,6 +23,7 @@ export class Product {
     price: string,
     oldprice: string,
     description: string,
+
 
   ) {
     this.id = id;
@@ -34,5 +36,9 @@ export class Product {
     this.oldprice = oldprice;
     this.description = description;
 
+
   }
+}
+export interface Category {
+  name: string;
 }

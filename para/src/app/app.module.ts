@@ -20,6 +20,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatIconModule } from '@angular/material/icon';
+import { PriceSliderComponent } from './price-slider/price-slider.component';
+import { CategoryFilterComponent } from './category-filter/category-filter.component';
+import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +44,8 @@ import { MatSliderModule } from '@angular/material/slider';
     LoginComponent,
     RegisterComponent,
     ForgetComponent,
+    PriceSliderComponent,
+    CategoryFilterComponent,
     
 
 
@@ -49,7 +58,11 @@ import { MatSliderModule } from '@angular/material/slider';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatPaginatorModule,
-    MatSliderModule
+    MatSliderModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatOptionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
